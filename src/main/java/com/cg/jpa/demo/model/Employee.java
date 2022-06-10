@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 // Oracle
 // CREATE TABLE emp_table 
-// (eid number(10) constraint employee_pk PRIMARY KEY, 
+// (eid number(10) constraint emp_table_pk PRIMARY KEY, 
 // first_name varchar(40), salary number(8,2));
 
 @Entity
@@ -24,7 +24,7 @@ public class Employee {
 	// this is primary key column field
 	@Id
 	@Column(name = "eid")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int eid;
 
 	@Column(name = "first_name")
