@@ -1,8 +1,21 @@
 package com.cg.jpa.demo.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+// CREATE TABLE employee 
+// (eid INT constraint employee_pk PRIMARY KEY, 
+// first_name varchar(40), salary DECIMAL);
+
+@Entity
 public class Employee {
 
+	// this is primary key column field
+	@Id
 	private int eid;
+
+	@Column(name = "first_name")
 	private String firstName;
 	private double salary;
 
