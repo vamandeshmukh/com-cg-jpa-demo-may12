@@ -4,9 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+// PostGRE
 // CREATE TABLE employee 
 // (eid INT constraint employee_pk PRIMARY KEY, 
 // first_name varchar(40), salary DECIMAL);
+
+//Oracle
+//CREATE TABLE employee 
+//(eid number(10) constraint employee_pk PRIMARY KEY, 
+//first_name varchar(40), salary number(8,2));
 
 @Entity
 public class Employee {

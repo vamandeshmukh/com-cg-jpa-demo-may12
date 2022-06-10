@@ -15,7 +15,7 @@ public class EmDemo {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistenceUnitName");
 		EntityManager em = emf.createEntityManager();
 
-		Employee emp = new Employee(101, "Sonu", 50000);
+		Employee emp = new Employee(102, "Sonu", 50000);
 
 		em.getTransaction().begin();
 
