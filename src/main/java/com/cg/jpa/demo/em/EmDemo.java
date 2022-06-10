@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 import com.cg.jpa.demo.model.Employee;
 
 public class EmDemo {
-
+ 
 	public static void main(String[] args) {
 
 		System.out.println("Start...");
