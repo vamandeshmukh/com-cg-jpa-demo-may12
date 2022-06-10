@@ -18,7 +18,7 @@ public class Employee {
 	@Column(name = "first_name")
 	private String firstName;
 	private double salary;
-
+ 
 	public Employee() {
 		super();
 	}
