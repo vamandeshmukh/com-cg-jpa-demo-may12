@@ -13,6 +13,6 @@
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<property name="hbm2ddl.auto">update</property>
-		<!-- mapping class="com.cg.jpa.demo.model.Employee" -->
+		<mapping class="com.cg.jpa.demo.model.Employee" />
 	</session-factory>
 </hibernate-configuration>

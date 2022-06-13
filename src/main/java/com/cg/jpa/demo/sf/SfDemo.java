@@ -16,12 +16,14 @@ public class SfDemo {
 		SessionFactory factory = config.buildSessionFactory();
 
 		Session session = factory.openSession();
+		session.beginTransaction();
 
 		Employee emp = new Employee(104, "Monu", 85000);
 
-		session.persist(emp);
+		session.save(emp);
 //		session.delete(emp);
 //		session.merge(emp);
+		
 		Employee emp2 = session.find(Employee.class, 104);
 		System.out.println(emp2.toString());
 
