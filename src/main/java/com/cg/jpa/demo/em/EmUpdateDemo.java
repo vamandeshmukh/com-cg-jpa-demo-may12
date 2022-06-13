@@ -6,13 +6,7 @@ import javax.persistence.Persistence;
 
 import com.cg.jpa.demo.model.Employee;
 
-// methods from EntityManager class for CRUD Operations - 
-// INSERT - persist();
-// UPDATE - merge();
-// DELETE - remove();
-// SELECT - find();
-
-public class EmDemo {
+public class EmUpdateDemo {
 
 	public static void main(String[] args) {
 
@@ -23,13 +17,16 @@ public class EmDemo {
 
 		em.getTransaction().begin();
 
-//		Employee emp = new Employee(103, "Sonu", 50000);
-//		em.persist(emp); // INSERT
-
-		// SELECT * FROM emp_table WHERE eid = 101;
-		Employee emp2 = em.find(Employee.class, 101); // SELECT 
+		Employee emp2 = em.find(Employee.class, 101); // SELECT
 		System.out.println(emp2.toString());
 
+		emp2.setSalary(60000);
+
+		System.out.println(emp2.toString());
+		em.merge(emp2);
+
+		emp2 = em.find(Employee.class, 101); // SELECT
+		System.out.println(emp2.toString());
 		em.getTransaction().commit();
 
 		em.close();
