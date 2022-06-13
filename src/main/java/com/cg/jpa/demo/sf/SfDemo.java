@@ -19,18 +19,19 @@ public class SfDemo {
 		Configuration config = new Configuration();
 		config.configure();
 		SessionFactory factory = config.buildSessionFactory();
-
 		Session session = factory.openSession();
+
 		session.beginTransaction();
 
-		Employee emp = new Employee(104, "Monu", 85000);
+		Employee emp = new Employee(105, "Ponu", 858585);
 
 		session.save(emp); // INSERT
 //		session.delete(emp);
 //		session.merge(emp);
 
-		Employee emp2 = session.find(Employee.class, 104);
+		Employee emp2 = session.find(Employee.class, 105); // SELECT 
 		System.out.println(emp2.toString());
+
 		session.getTransaction().commit();
 
 		session.close();
